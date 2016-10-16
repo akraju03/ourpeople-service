@@ -1,10 +1,6 @@
 package com.ourpeople.resources;
 
 import java.util.concurrent.atomic.AtomicLong;
-
-
-
-
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -15,20 +11,19 @@ import javax.ws.rs.core.MediaType;
 
 import org.eclipse.jetty.util.security.Password;
 
+import com.codahale.metrics.annotation.Timed;
 import com.google.common.base.Optional;
 import com.ourpeople.models.UserDetails;
 import com.ourpeople.services.LoginService;
 import com.wordnik.swagger.annotations.ApiOperation;
 import com.wordnik.swagger.annotations.ApiResponse;
 import com.wordnik.swagger.annotations.ApiResponses;
-import com.yammer.metrics.annotation.Timed;
 
 @Path("/login")
 @Produces(MediaType.APPLICATION_JSON)
 public class LoginResource {
 	
 	@GET
-    @Timed
     @ApiOperation(value = "Get Sku by ID", notes = "Gets Sku for the given ID.", response = UserDetails.class)
     @ApiResponses(value = { @ApiResponse(code = 200, message = "Successful retrieval of Sku", response = UserDetails.class),
             @ApiResponse(code = 404, message = "Sku doesn't exist"), @ApiResponse(code = 500, message = "Internal server error") })

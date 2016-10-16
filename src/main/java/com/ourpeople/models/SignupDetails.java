@@ -2,6 +2,8 @@ package com.ourpeople.models;
 
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 
+
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

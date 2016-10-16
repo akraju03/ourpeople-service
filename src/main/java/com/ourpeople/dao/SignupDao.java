@@ -1,6 +1,8 @@
 package com.ourpeople.dao;
 
 import java.sql.Connection;
+
+
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -22,7 +24,7 @@ public class SignupDao {
 	public UserDetails userDetails = new UserDetails();
 
 	final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-	final String DB_URL = "jdbc:mysql://localhost:3306/ourpeople?useSSL=false";
+	final String DB_URL = "jdbc:mysql://localhost:3306/ourpeople";
 
 	// Database credentials
 	final String USER = "root";
